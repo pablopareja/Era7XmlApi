@@ -1,0 +1,3 @@
+Era7XmlApi includes the core classes for XML manipulation based on jdom.
+
+Era7BioinfoXml is based on this api.
