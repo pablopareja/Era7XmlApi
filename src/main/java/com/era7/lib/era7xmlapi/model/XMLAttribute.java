@@ -10,8 +10,8 @@ import org.jdom.Namespace;
 
 import com.era7.lib.era7xmlapi.interfaces.IAttribute;
 import com.era7.lib.era7xmlapi.interfaces.INameSpace;
-import com.sleepycat.dbxml.XmlException;
-import com.sleepycat.dbxml.XmlValue;
+//import com.sleepycat.dbxml.XmlException;
+//import com.sleepycat.dbxml.XmlValue;
 
 public class XMLAttribute implements IAttribute {
 
@@ -43,28 +43,28 @@ public class XMLAttribute implements IAttribute {
 		this.attribute = new org.jdom.Attribute(name,value,Namespace.getNamespace(ns.getPrefix(),ns.getUri()));
 	}
 	
-	/**
-	 * 
-	 * @param value
-	 * @throws XMLElementException 
-	 * @throws IOException 
-	 * @throws JDOMException 
-	 * @throws ParserConfigurationException 
-	 */
-	public XMLAttribute(XmlValue value) throws XMLElementException{
-		try {
-			if(value.getNodeType() == XmlValue.ATTRIBUTE_NODE){
-				this.attribute = new org.jdom.Attribute(value.getNodeName(),
-														value.getNodeValue(),
-														Namespace.getNamespace(value.getPrefix(), value.getNamespaceURI()));
-			}else{
-				throw new XMLElementException(XMLElementException.WRONG_CONSTRUCTOR_PARAMETER,null);
-			}
-		} catch (XmlException e) {
-			e.printStackTrace();
-			throw new XMLElementException(XMLElementException.WRONG_CONSTRUCTOR_PARAMETER,null);
-		}
-	}
+//	/**
+//	 * 
+//	 * @param value
+//	 * @throws XMLElementException 
+//	 * @throws IOException 
+//	 * @throws JDOMException 
+//	 * @throws ParserConfigurationException 
+//	 */
+//	public XMLAttribute(XmlValue value) throws XMLElementException{
+//		try {
+//			if(value.getNodeType() == XmlValue.ATTRIBUTE_NODE){
+//				this.attribute = new org.jdom.Attribute(value.getNodeName(),
+//														value.getNodeValue(),
+//														Namespace.getNamespace(value.getPrefix(), value.getNamespaceURI()));
+//			}else{
+//				throw new XMLElementException(XMLElementException.WRONG_CONSTRUCTOR_PARAMETER,null);
+//			}
+//		} catch (XmlException e) {
+//			e.printStackTrace();
+//			throw new XMLElementException(XMLElementException.WRONG_CONSTRUCTOR_PARAMETER,null);
+//		}
+//	}
 
 	@Override
 	public String getName() {

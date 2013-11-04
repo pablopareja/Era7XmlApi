@@ -20,11 +20,10 @@ import org.xml.sax.InputSource;
 
 import com.era7.lib.era7xmlapi.interfaces.IElement;
 import com.era7.lib.era7xmlapi.interfaces.INameSpace;
-import com.sleepycat.dbxml.XmlDocument;
-import com.sleepycat.dbxml.XmlException;
-import com.sleepycat.dbxml.XmlManager;
-import com.sleepycat.dbxml.XmlValue;
-import org.jdom.xpath.XPath;
+//import com.sleepycat.dbxml.XmlDocument;
+//import com.sleepycat.dbxml.XmlException;
+//import com.sleepycat.dbxml.XmlManager;
+//import com.sleepycat.dbxml.XmlValue;
 
 public class XMLElement implements IElement {
 
@@ -72,27 +71,27 @@ public class XMLElement implements IElement {
         doc = builder.build(new InputSource(reader));
         root = doc.getRootElement();
     }
-
-    /**
-     *
-     * @param value
-     * @throws XMLElementException
-     * @throws IOException
-     * @throws JDOMException
-     * @throws ParserConfigurationException
-     */
-    public XMLElement(XmlValue value) throws XMLElementException, ParserConfigurationException, JDOMException, IOException {
-        try {
-            if (value.getNodeType() == XmlValue.ELEMENT_NODE) {
-                buildElementFromString(value.asString());
-            } else {
-                throw new XMLElementException(XMLElementException.WRONG_CONSTRUCTOR_PARAMETER, null);
-            }
-        } catch (XmlException e) {
-            e.printStackTrace();
-            throw new XMLElementException(XMLElementException.WRONG_CONSTRUCTOR_PARAMETER, null);
-        }
-    }
+//
+//    /**
+//     *
+//     * @param value
+//     * @throws XMLElementException
+//     * @throws IOException
+//     * @throws JDOMException
+//     * @throws ParserConfigurationException
+//     */
+//    public XMLElement(XmlValue value) throws XMLElementException, ParserConfigurationException, JDOMException, IOException {
+//        try {
+//            if (value.getNodeType() == XmlValue.ELEMENT_NODE) {
+//                buildElementFromString(value.asString());
+//            } else {
+//                throw new XMLElementException(XMLElementException.WRONG_CONSTRUCTOR_PARAMETER, null);
+//            }
+//        } catch (XmlException e) {
+//            e.printStackTrace();
+//            throw new XMLElementException(XMLElementException.WRONG_CONSTRUCTOR_PARAMETER, null);
+//        }
+//    }
 
     @Override
     public String getName() {
@@ -303,14 +302,14 @@ public class XMLElement implements IElement {
     public Element asJDomElement() {
         return this.root;
     }
-
-    @Override
-    public XmlValue asXmlvalue() throws XmlException, FileNotFoundException {
-        XmlDocument tempDoc = new XmlManager().createDocument();
-        tempDoc.setContent(this.toString());
-        XmlValue temp = new XmlValue(tempDoc);
-        return temp;
-    }
+//
+//    @Override
+//    public XmlValue asXmlvalue() throws XmlException, FileNotFoundException {
+//        XmlDocument tempDoc = new XmlManager().createDocument();
+//        tempDoc.setContent(this.toString());
+//        XmlValue temp = new XmlValue(tempDoc);
+//        return temp;
+//    }
 
     @Override
     public void addChild(XMLElement element) {

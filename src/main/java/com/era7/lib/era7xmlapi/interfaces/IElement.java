@@ -4,8 +4,6 @@ import com.era7.lib.era7xmlapi.model.XMLAttribute;
 import com.era7.lib.era7xmlapi.model.XMLElement;
 import java.util.List;
 
-import com.sleepycat.dbxml.XmlValue;
-
 public interface IElement extends IXmlThing {
 
     List<XMLElement> getChildren();
@@ -25,6 +23,6 @@ public interface IElement extends IXmlThing {
     void addChildren(List<XMLElement> list);
     
     org.jdom.Element asJDomElement();
-    XmlValue asXmlvalue() throws Exception;
+//    XmlValue asXmlvalue() throws Exception;
 	
 }
