@@ -1,17 +1,11 @@
 package com.era7.lib.era7xmlapi.model;
 
-import java.io.IOException;
-
-import javax.xml.parsers.ParserConfigurationException;
 
 import org.jdom.Attribute;
-import org.jdom.JDOMException;
 import org.jdom.Namespace;
 
 import com.era7.lib.era7xmlapi.interfaces.IAttribute;
 import com.era7.lib.era7xmlapi.interfaces.INameSpace;
-//import com.sleepycat.dbxml.XmlException;
-//import com.sleepycat.dbxml.XmlValue;
 
 public class XMLAttribute implements IAttribute {
 

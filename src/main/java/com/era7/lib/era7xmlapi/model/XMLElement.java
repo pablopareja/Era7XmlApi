@@ -20,10 +20,6 @@ import org.xml.sax.InputSource;
 
 import com.era7.lib.era7xmlapi.interfaces.IElement;
 import com.era7.lib.era7xmlapi.interfaces.INameSpace;
-//import com.sleepycat.dbxml.XmlDocument;
-//import com.sleepycat.dbxml.XmlException;
-//import com.sleepycat.dbxml.XmlManager;
-//import com.sleepycat.dbxml.XmlValue;
 
 public class XMLElement implements IElement {
 
